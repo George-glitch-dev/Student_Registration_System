@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="SR.CSS">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration System</h1>
+        <p>Register a new student below</p>
+
+        <form action="process_register.php" method="POST">
+
+            <label for="name">Student Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter student name"
+                required
+            >
+
+            <label for="course">Course</label>
+            <input
+                type="text"
+                id="course"
+                name="course"
+                placeholder="Enter course"
+                required
+            >
+
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Enter student age"
+                min="5"
+                max="100"
+                required
+            >
+
+            <button type="submit">Register Student</button>
+
+        </form>
+
+        <div class="links">
+            <a href="view.php">View Registered Students</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

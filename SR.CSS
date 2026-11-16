@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #edf6ff 0%, #eaf7f3 100%);
+    color: black;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid #d6e7f4;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f4c5c;
+    letter-spacing: 0.04em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #215c81;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #dff4f0;
+    color: #0d5a639b;
+}
+
+.container {
+    width: min(90%, 520px);
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dfeaf5;
+    padding: 32px 30px;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(14, 54, 73, 0.12);
+}
+
+main.container {
+    width: min(90%, 900px);
+    margin: 50px auto;
+}
+
+h1,
+h2 {
+    color: blue;
+    margin-bottom: 12px;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(2rem, 2vw, 2rem);
+}
+
+p {
+    text-align: center;
+    color: #5d7285;
+    margin-bottom: 26px;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    color: #23455d;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cfe0eb;
+    border-radius: 10px;
+    background: #f9fcff;
+    font-size: 1rem;
+    color: #123d52;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5aa7b5;
+    box-shadow: 0 0 0 3px rgba(90, 167, 181, 0.18);
+}
+
+button {
+    width: 100%;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #6914e0 0%, #5e08c1 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.15s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 20px rgba(31, 122, 67, 0.18);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(7, 182, 48, 0.25);
+}
+
+.links {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.links a {
+    color: #1f6e7a;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.form-section {
+    background: #ffffff;
+    border: 1px solid #dfeaf5;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 12px 30px rgba(26, 68, 89, 0.08);
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.student-table th,
+.student-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e6eef3;
+}
+
+.student-table th {
+    background: #eaf6f5;
+    color: #174b59;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.student-table tbody tr {
+    background: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.student-table tbody tr:nth-child(even) {
+    background: #f8fbfc;
+}
+
+.student-table tbody tr:hover {
+    background: #eef8f7;
+}
+
+.student-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-action {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.table-action:hover {
+    background: green;
+    color: white;
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-action {
+    width: auto;
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: whitesmoke;
+    color: black;
+    box-shadow: none;
+}
+
+.delete-action:hover {
+    background: var(--crlr, red);
+    box-shadow: none;
+    letter-spacing: 0.5px;
+}
+
+.registration-message {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    background: #fff7e8;
+    border: 1px solid #f2dfb6;
+    color: #775619;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.student-row,
+.student-edit-row {
+    display: grid;
+    grid-template-columns: 1.8fr 0.6fr 1.2fr;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #edf3f7;
+}
+
+.student-row:last-child,
+.student-edit-row:last-child {
+    border-bottom: none;
+}
+
+.student-heading {
+    font-weight: 800;
+    color: #1d4758;
+    background: #f4fbfc;
+    border-radius: 10px 10px 0 0;
+}
+
+.registration-success {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    background: #ebfaf4;
+    border: 1px solid #c5ebd1;
+    color: #1a5f3d;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+#editMessage {
+    display: block;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    background: #ecf9ff;
+    border: 1px solid #cfeaf7;
+    border-radius: 10px;
+    color: #185a70;
+    font-weight: 700;
+}
+
+.student-edit-row {
+    grid-template-columns: 1fr 0.7fr 1fr auto;
+    gap: 10px;
+    align-items: end;
+    padding: 14px 8px;
+}
+
+.student-edit-row label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: #375a6e;
+}
+
+.student-edit-row input {
+    margin-bottom: 0;
+}
+
+.student-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.student-actions button,
+.remove-student {
+    width: auto;
+    min-width: 100px;
+    padding: 10px 14px;
+}
+
+.remove-student {
+    background: linear-gradient(135deg, #f39b7b 0%, #d96d4d 100%);
+    box-shadow: 0 8px 18px rgba(217, 109, 77, 0.16);
+}
+
+.remove-student:hover {
+    background: linear-gradient(135deg, #ed8f68 0%, #c75a3a 100%);
+}
+
+@media (max-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+
+    .container,
+    main.container {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    .student-row,
+    .student-edit-row {
+        grid-template-columns: 1fr;
+    }
+
+    .student-table {
+        min-width: 600px;
+    }
+
+    .student-actions {
+        justify-content: stretch;
+    }
+
+    .student-actions button,
+    .remove-student {
+        width: 100%;
+    }
+}
